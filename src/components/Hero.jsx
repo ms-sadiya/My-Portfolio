@@ -21,11 +21,11 @@ const Hero = ({ darkMode, scrollToSection }) => {
             transition={{ delay: 0.2 }} 
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-bold text-xs uppercase tracking-widest mb-8 border border-indigo-500/20"
           >
-            <Sparkles size={14} /> Available for Immediate Joining
+            <Sparkles size={14} /> Junior Mern Stack Developer
           </motion.div>
 
           <motion.h1 
-            className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85] mb-8" 
+            className="text-6xl md:text-7xl font-black tracking-tighter leading-[0.85] mb-8" 
             initial={{ opacity: 0, y: 20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ delay: 0.3 }}

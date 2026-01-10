@@ -67,7 +67,12 @@ const Header = ({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen, acti
               {navItems.map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item)}
+                  type="button"
+                  onClick={() => {
+                    // ensure the menu closes and then navigate after a short delay
+                    setMobileMenuOpen(false)
+                    setTimeout(() => scrollToSection(item), 120)
+                  }}
                   className={`block w-full text-left px-4 py-4 text-lg font-bold rounded-2xl transition-all ${
                     activeSection === item.toLowerCase()
                     ? 'bg-indigo-600 text-white'
