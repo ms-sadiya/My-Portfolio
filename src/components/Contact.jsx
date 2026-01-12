@@ -3,6 +3,7 @@ import { Bot, Mail, Phone, Send } from "lucide-react";
 import axios from "axios"
 
 const Contact = ({ darkMode }) => {
+  
   const [icebreaker, setIcebreaker] = useState("");
   const [isGeneratingIcebreaker, setIsGeneratingIcebreaker] = useState(false);
 
@@ -34,8 +35,11 @@ const Contact = ({ darkMode }) => {
     e.preventDefault();
     setSending(true);
     setStatus(null);
+
+    const API_URL = import.meta.env.VITE_API_URL;
+
     try {
-      await axios.post('http://localhost:5000/api/contact', { name, email, message });
+      await axios.post(`${API_URL}/api/contact`, { name, email, message });
       setStatus({ ok: true, text: 'Message sent' });
       setName(''); setEmail(''); setMessage('');
     } catch (err) {
