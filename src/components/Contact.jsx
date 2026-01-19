@@ -38,12 +38,16 @@ const Contact = ({ darkMode }) => {
     setStatus(null);
 
     const API_URL = import.meta.env.VITE_API_URL;
+    console.log('API_URL:', API_URL);
+    console.log('Submitting form data:', { name, email, subject, message: message.substring(0, 50) + '...' });
 
     try {
-      await axios.post(`${API_URL}/api/contact`, { name, email, subject, message });
+      const response = await axios.post(`${API_URL}/api/contact`, { name, email, subject, message });
+      console.log('Response:', response.data);
       setStatus({ ok: true, text: 'Message sent' });
       setName(''); setEmail(''); setSubject(''); setMessage('');
     } catch (err) {
+      console.error('Error:', err.response ? err.response.data : err.message);
       setStatus({ ok: false, text: 'Send failed' });
     } finally {
       setSending(false);
