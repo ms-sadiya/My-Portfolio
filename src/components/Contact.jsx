@@ -10,6 +10,7 @@ const Contact = ({ darkMode }) => {
   // form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [sending, setSending] = useState(false);
   const [status, setStatus] = useState(null);
@@ -39,9 +40,9 @@ const Contact = ({ darkMode }) => {
     const API_URL = import.meta.env.VITE_API_URL;
 
     try {
-      await axios.post(`${API_URL}/api/contact`, { name, email, message });
+      await axios.post(`${API_URL}/api/contact`, { name, email, subject, message });
       setStatus({ ok: true, text: 'Message sent' });
-      setName(''); setEmail(''); setMessage('');
+      setName(''); setEmail(''); setSubject(''); setMessage('');
     } catch (err) {
       setStatus({ ok: false, text: 'Send failed' });
     } finally {
@@ -187,6 +188,21 @@ const Contact = ({ darkMode }) => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
+                    className={`w-full p-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-indigo-300 transition-all ${
+                      darkMode
+                        ? "bg-slate-700 text-white"
+                        : "bg-white text-slate-900"
+                    }`}
+                  />
+                </div>
+                <div className="space-y-1">
+                  <label className="text-xs font-black uppercase tracking-widest opacity-60">
+                    Subject
+                  </label>
+                  <input
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    type="text"
                     className={`w-full p-3 rounded-xl border border-slate-200 outline-none focus:ring-2 focus:ring-indigo-300 transition-all ${
                       darkMode
                         ? "bg-slate-700 text-white"
