@@ -25,8 +25,7 @@ const skills = {
     'Git',
     'GitHub',
     'Postman',
-    'VS Code',
-    'Vite'
+    'VS Code'
   ],
   softSkills: [
     'Agile Collaboration',
