@@ -6,8 +6,6 @@ const Contact = ({ darkMode }) => {
   
   const [icebreaker, setIcebreaker] = useState("");
   const [isGeneratingIcebreaker, setIsGeneratingIcebreaker] = useState(false);
-
-  // form state
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
