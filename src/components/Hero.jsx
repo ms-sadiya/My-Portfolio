@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowUpRight, Github, Linkedin, Code, Layers, Zap } from 'lucide-react';
 import profilePic from '../assets/Sadiya profile.jpg';
+import Resume from '../assets/Sadiya MERN.pdf'
 
 const Hero = ({ darkMode, scrollToSection }) => {
   return (
@@ -57,6 +58,13 @@ const Hero = ({ darkMode, scrollToSection }) => {
             >
               Hire Me <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </button>
+            <a 
+              href={Resume}
+              download="Ansari_Sadiya_Resume.pdf"
+              className="group px-10 py-5 bg-transparent border-2 border-indigo-600 text-indigo-600 dark:text-indigo-400 rounded-2xl font-black shadow-2xl shadow-indigo-600/20 hover:bg-indigo-600 hover:text-white transition-all flex items-center gap-3 active:scale-95 text-lg"
+            >
+              Resume <ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </a>
             <div className="flex items-center gap-4 ml-2">
               <a href="https://github.com/ms-sadiya" target="_blank" rel="noreferrer" className={`p-4 ${darkMode ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-600'} rounded-2xl hover:text-indigo-500 hover:scale-110 transition-all shadow-sm`}>
                 <Github size={24} />
