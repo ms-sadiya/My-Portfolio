@@ -5,9 +5,9 @@ import ibmCert from '../assets/ibm-cert.pdf';
 import iuceeCert from '../assets/iucee-mini-course.pdf';
 
 const Education = ({ darkMode }) => (
-  <section id="education" className="py-32 px-4">
-    <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
-      <ScrollReveal className={`p-12 rounded-[3rem] border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-100'}`}>
+  <section id="education" className="py-16 md:py-32 px-4">
+    <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-12">
+      <ScrollReveal className={`p-6 md:p-12 rounded-[3rem] border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-100'}`}>
         <div className="flex items-center gap-4 mb-10">
           <GraduationCap size={40} className="text-indigo-600" />
           <h2 className="text-3xl font-black">Academic Excellence</h2>
@@ -16,11 +16,11 @@ const Education = ({ darkMode }) => (
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-xl font-black mb-1">BH Gardi College of Engineering</h3>
-              <p className="text-indigo-500 font-bold mb-4">B.Tech in Computer Science</p>
+              <p className="text-indigo-500 font-bold mb-4">B.E in Computer Engineering</p>
             </div>
             <div className="text-right">
               <p className="font-bold">2021-25</p>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-xl font-black">CGPA: 8.00</div>
+              <div className="inline-flex items-center gap-2 px-2 md:px-4 py-1 md:py-2 bg-indigo-600 text-white rounded-xl font-black">CGPA: 8.00</div>
             </div>
           </div>
 
@@ -31,7 +31,7 @@ const Education = ({ darkMode }) => (
             </div>
             <div className="text-right">
               <p className="font-bold">2019-21</p>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-xl font-black">Percentage:73.54%</div>
+              <div className="inline-flex items-center gap-2 px-2 md:px-4 py-1 md:py-2 bg-indigo-600 text-white rounded-xl font-black">Percentage:73.54%</div>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Education = ({ darkMode }) => (
           { title: "IBM SkillsBuild - AI Training", issuer: "IBM", asset: ibmCert },
           { title: "IUCEE Mini Course - AI", issuer: "IUCEE", asset: iuceeCert }
         ].map((cert, i) => (
-          <div key={i} className={`p-8 rounded-32px border transition-all hover:translate-x-2 ${darkMode ? 'bg-slate-900 border-slate-800 hover:border-pink-500' : 'bg-white border-slate-100 hover:border-pink-500'}`}>
+          <div key={i} className={`p-4 md:p-8 rounded-32px border transition-all hover:translate-x-2 ${darkMode ? 'bg-slate-900 border-slate-800 hover:border-pink-500' : 'bg-white border-slate-100 hover:border-pink-500'}`}>
             <div className="flex justify-between items-center">
               <div>
                 <h4 className="text-lg font-black">{cert.title}</h4>
