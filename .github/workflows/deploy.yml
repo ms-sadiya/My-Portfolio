@@ -27,5 +27,4 @@ jobs:
       - name: Deploy to Netlify
         run: |
           npm install -g netlify-cli
-          netlify deploy \
-            --pr
+          netlify deploy --prod --dir dist
