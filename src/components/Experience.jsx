@@ -14,7 +14,7 @@ const experiences = [
     ]
   },
   {
-    role: "Jr MERN Stack Developer",
+    role: "MERN Stack Developer",
     company: "Dynastack Softwares, Ahmedabad",
     period: "April 2025 – Present",
     points: [
@@ -30,28 +30,28 @@ const experiences = [
 const Experience = ({ darkMode }) => (
   <section id="experience" className="py-32 px-4">
     <div className="max-w-5xl mx-auto">
-      <div className="flex items-center gap-4 mb-20">
-        <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
-        <h2 className="text-4xl md:text-5xl font-black whitespace-nowrap">Industry Experience</h2>
+      <div className="flex items-center gap-4 mb-10 md:mb-20">
+        <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800 " ></div>
+        <h2 className="text-3xl md:text-6xl font-black justify-center whitespace-nowrap">Industry Experience</h2>
         <div className="h-px flex-1 bg-slate-200 dark:bg-slate-800"></div>
       </div>
 
       <div className="space-y-8">
         {experiences.map((exp, idx) => (
-          <ScrollReveal key={idx} className={`relative p-8 md:p-12 rounded-4xl border ${darkMode ? 'bg-slate-900/50 border-slate-800' : 'bg-white border-slate-100'} shadow-2xl`}>
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
+          <ScrollReveal key={idx} className={`relative p-10 md:p-16 rounded-4xl border ${darkMode ? 'bg-slate-900/50 border-slate-800' : 'bg-white border-slate-100'} shadow-2xl`}>
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 md:mb-6 gap-4">
               <div>
-                <h3 className="text-2xl md:text-3xl font-black text-indigo-600">{exp.role}</h3>
-                <p className="text-lg md:text-xl font-bold mt-2">{exp.company}</p>
+                <h3 className="text-xl md:text-2xl font-black text-indigo-600">{exp.role}</h3>
+                <p className="text-base md:text-lg font-bold mt-2">{exp.company}</p>
               </div>
               <span className={`px-4 py-2 md:px-6 md:py-2 rounded-full font-black text-sm uppercase tracking-widest ${darkMode ? 'bg-slate-800 text-slate-400' : 'bg-slate-100 text-slate-500'}`}>{exp.period}</span>
             </div>
 
-            <div className="grid md:grid-cols-1 gap-4">
+            <div className="grid md:grid-cols-1 gap-2 md:gap-4">
               {exp.points.map((point, i) => (
                 <div key={i} className="flex gap-4 items-start">
                   <div className="mt-2 w-2 h-2 rounded-full bg-indigo-500 shrink-0 shadow-[0_0_10px_rgba(79,70,229,0.5)]"></div>
-                  <p className="text-lg text-slate-500 dark:text-slate-400 leading-relaxed">{point}</p>
+                  <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 leading-relaxed">{point}</p>
                 </div>
               ))}
             </div>

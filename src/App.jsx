@@ -78,15 +78,15 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-500 ${darkMode ? "bg-[#0f172a] text-slate-100" : "bg-slate-50 text-slate-900"}`}
+      className={`min-h-screen transition-colors duration-500 overflow-x-hidden ${darkMode ? "bg-[#0f172a] text-slate-100" : "bg-slate-50 text-slate-900"}`}
     >
       {/* subtle blurred background accents */}
       <div className="fixed inset-0 pointer-events-none -z-10">
         <div
-          className={`absolute top-[-10%] right-[-10%] w-105 h-105 rounded-full blur-[96px] opacity-20 ${darkMode ? "bg-indigo-600" : "bg-indigo-300"}`}
+          className={`absolute top-[-10%] right-[-10%] w-64 md:w-105 h-64 md:h-105 rounded-full blur-[96px] opacity-20 ${darkMode ? "bg-indigo-600" : "bg-indigo-300"}`}
         ></div>
         <div
-          className={`absolute bottom-[-10%] left-[-10%] w-105 h-105 rounded-full blur-[96px] opacity-20 ${darkMode ? "bg-pink-600" : "bg-pink-300"}`}
+          className={`absolute bottom-[-10%] left-[-10%] w-64 md:w-105 h-64 md:h-105 rounded-full blur-[96px] opacity-20 ${darkMode ? "bg-pink-600" : "bg-pink-300"}`}
         ></div>
       </div>
       <Header
