@@ -11,7 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import profilePic from "../assets/Sadiya profile.jpg";
-import Resume from "../assets/Sadiya MERN.pdf";
+import Resume from "../assets/sadiya-full-stack.pdf";
 
 const Hero = ({ darkMode, scrollToSection }) => {
   return (
