@@ -4,10 +4,10 @@ import { GraduationCap, Award, ArrowUpRight } from 'lucide-react';
 import ibmCert from '../assets/ibm-cert.pdf';
 import iuceeCert from '../assets/iucee-mini-course.pdf';
 
-const Education = ({ darkMode }) => (
+const Education = () => (
   <section id="education" className="py-16 md:py-32 px-4">
     <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 md:gap-12">
-      <ScrollReveal className={`p-6 md:p-12 rounded-[3rem] border ${darkMode ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-100'}`}>
+      <ScrollReveal className="p-6 md:p-12 rounded-[3rem] border bg-white border-slate-100">
         <div className="flex items-center gap-4 mb-10">
           <GraduationCap size={40} className="text-indigo-600" />
           <h2 className="text-3xl font-black">Academic Excellence</h2>
@@ -46,7 +46,7 @@ const Education = ({ darkMode }) => (
           { title: "IBM SkillsBuild - AI Training", issuer: "IBM", asset: ibmCert },
           { title: "IUCEE Mini Course - AI", issuer: "IUCEE", asset: iuceeCert }
         ].map((cert, i) => (
-          <div key={i} className={`p-4 md:p-8 rounded-32px border transition-all hover:translate-x-2 ${darkMode ? 'bg-slate-900 border-slate-800 hover:border-pink-500' : 'bg-white border-slate-100 hover:border-pink-500'}`}>
+          <div key={i} className="p-4 md:p-8 rounded-32px border transition-all hover:translate-x-2 bg-white border-slate-100 hover:border-pink-500">
             <div className="flex justify-between items-center">
               <div>
                 <h4 className="text-lg font-black">{cert.title}</h4>

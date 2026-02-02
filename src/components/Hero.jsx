@@ -13,7 +13,7 @@ import {
 import profilePic from "../assets/Sadiya profile.jpg";
 import Resume from "../assets/sadiya-full-stack.pdf";
 
-const Hero = ({ darkMode, scrollToSection }) => {
+const Hero = ({ scrollToSection }) => {
   return (
     <section
       id="home"
@@ -49,14 +49,14 @@ const Hero = ({ darkMode, scrollToSection }) => {
           </motion.h1>
 
           <motion.p
-            className={`text-xl md:text-2xl mb-12 leading-relaxed max-w-xl ${darkMode ? "text-slate-400" : "text-slate-600"}`}
+            className="text-xl md:text-2xl mb-12 leading-relaxed max-w-xl text-slate-600"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
             I'm{" "}
             <span
-              className={`font-bold ${darkMode ? "text-white" : "text-slate-900"}`}
+              className="font-bold text-slate-900"
             >
               Ansari Sadiya
             </span>
@@ -90,7 +90,7 @@ const Hero = ({ darkMode, scrollToSection }) => {
                 href="https://github.com/ms-sadiya"
                 target="_blank"
                 rel="noreferrer"
-                className={`p-4 ${darkMode ? "bg-slate-800 text-slate-300" : "bg-slate-100 text-slate-600"} rounded-2xl hover:text-indigo-500 hover:scale-110 transition-all shadow-sm`}
+                className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:text-indigo-500 hover:scale-110 transition-all shadow-sm"
               >
                 <Github size={24} />
               </a>
@@ -98,7 +98,7 @@ const Hero = ({ darkMode, scrollToSection }) => {
                 href="https://www.linkedin.com/in/ansari-sadiya003"
                 target="_blank"
                 rel="noreferrer"
-                className={`p-4 ${darkMode ? "bg-slate-800 text-slate-300" : "bg-slate-100 text-slate-600"} rounded-2xl hover:text-indigo-500 hover:scale-110 transition-all shadow-sm`}
+                className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:text-indigo-500 hover:scale-110 transition-all shadow-sm"
               >
                 <Linkedin size={24} />
               </a>
@@ -117,16 +117,16 @@ const Hero = ({ darkMode, scrollToSection }) => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none">
             <div
               className={`absolute top-0 right-10 w-72 h-72 rounded-full blur-[100px] opacity-40 animate-pulse`}
-              style={{ background: "linear-gradient(135deg,#6366f1,#a855f7)" }}
+              style={{ background: "linear-linear(135deg,#6366f1,#a855f7)" }}
             />
             <div
               className={`absolute bottom-0 left-10 w-64 h-64 rounded-full blur-[100px] opacity-30 animate-bounce-slow`}
-              style={{ background: "linear-gradient(135deg,#ec4899,#f97316)" }}
+              style={{ background: "linear-linear(135deg,#ec4899,#f97316)" }}
             />
           </div>
 
           <div
-            className={`relative z-10 p-4 rounded-[3.5rem] transition-colors duration-500 ${darkMode ? "bg-slate-900/40" : "bg-white/60"} backdrop-blur-xl border ${darkMode ? "border-white/10" : "border-slate-200"} shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] group`}
+            className="relative z-10 p-4 rounded-[3.5rem] transition-colors duration-500 bg-white/60 backdrop-blur-xl border border-slate-200 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)] group"
           >
             {/* Main Profile Container */}
             <div className="relative">
@@ -138,7 +138,7 @@ const Hero = ({ darkMode, scrollToSection }) => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className={`absolute -left-8 top-12 z-20 p-4 rounded-2xl shadow-xl border ${darkMode ? "bg-slate-800 border-slate-700 text-indigo-400" : "bg-white border-slate-100 text-indigo-600"}`}
+                className="absolute -left-8 top-12 z-20 p-4 rounded-2xl shadow-xl border bg-white border-slate-100 text-indigo-600"
               >
                 <Code size={24} strokeWidth={2.5} />
               </motion.div>
@@ -151,13 +151,13 @@ const Hero = ({ darkMode, scrollToSection }) => {
                   ease: "easeInOut",
                   delay: 1,
                 }}
-                className={`absolute -right-6 bottom-20 z-20 p-4 rounded-2xl shadow-xl border ${darkMode ? "bg-slate-800 border-slate-700 text-pink-400" : "bg-white border-slate-100 text-pink-600"}`}
+                className="absolute -right-6 bottom-20 z-20 p-4 rounded-2xl shadow-xl border bg-white border-slate-100 text-pink-600"
               >
                 <Zap size={24} strokeWidth={2.5} />
               </motion.div>
 
               <div
-                className={`rounded-[2.8rem] p-2 ${darkMode ? "bg-linear-to-tr from-indigo-500 via-purple-500 to-pink-500" : "bg-linear-to-tr from-indigo-200 via-purple-200 to-pink-200"}`}
+                className="rounded-[2.8rem] p-2 bg-linear-to-tr from-indigo-200 via-purple-200 to-pink-200"
               >
                 <div
                   className={`w-72 h-72 md:w-80 md:h-80 rounded-[2.5rem] overflow-hidden shadow-inner relative transition-transform duration-500 group-hover:scale-[1.02]`}
@@ -180,12 +180,12 @@ const Hero = ({ darkMode, scrollToSection }) => {
             {/* User Info Overlay Card */}
             <div className={`mt-6 text-center pb-4`}>
               <h3
-                className={`text-2xl font-black tracking-tight ${darkMode ? "text-white" : "text-slate-900"}`}
+                className="text-2xl font-black tracking-tight text-slate-900"
               >
                 Ansari Sadiya
               </h3>
               <p
-                className={`text-sm font-medium mt-1 flex items-center justify-center gap-2 ${darkMode ? "text-slate-400" : "text-slate-500"}`}
+                className="text-sm font-medium mt-1 flex items-center justify-center gap-2 text-slate-500"
               >
                 <Layers size={14} className="text-indigo-500" /> Mern Stack
                 Developer

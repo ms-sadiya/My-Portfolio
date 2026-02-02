@@ -57,8 +57,8 @@ const categoryMeta = {
   }
 };
 
-const Skills = ({ darkMode }) => (
-  <section id="skills" className="py-32 px-4 bg-slate-900/5 dark:bg-slate-900/30">
+const Skills = () => (
+  <section id="skills" className="py-32 px-4 bg-slate-900/5">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-black mb-4">Key Skills</h2>
@@ -70,7 +70,7 @@ const Skills = ({ darkMode }) => (
           <ScrollReveal
             key={category}
             delay={index * 0.08}
-            className={`relative p-8 md:p-12 rounded-4xl  border transition-all group ${darkMode ? 'bg-slate-900/50 border-slate-800' : 'bg-white border-slate-100'} shadow-2xl`}
+            className="relative p-8 md:p-12 rounded-4xl  border transition-all group bg-white border-slate-100 shadow-2xl"
           >
             <div className="flex items-start gap-4 mb-6">
               <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-linear-to-br from-indigo-100 to-pink-100">
@@ -87,7 +87,7 @@ const Skills = ({ darkMode }) => (
               {items.map((skill, idx) => (
                 <span
                   key={idx}
-                  className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-black uppercase tracking-wider ${darkMode ? 'bg-slate-800 text-slate-200' : 'bg-slate-100 text-slate-700'}`}
+                  className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-black uppercase tracking-wider bg-slate-100 text-slate-700"
                 >
                   <CheckCircle2 size={14} className="text-indigo-400" />
                   {skill}

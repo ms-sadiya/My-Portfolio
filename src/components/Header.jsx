@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
-const Header = ({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen, activeSection, navItems, scrollToSection }) => {
+const Header = ({ mobileMenuOpen, setMobileMenuOpen, activeSection, navItems, scrollToSection }) => {
   return (
-    <nav className={`fixed w-full z-50 transition-all ${darkMode ? 'bg-slate-950/80 border-slate-800' : 'bg-white/80 border-slate-200'} backdrop-blur-md border-b`}>
+    <nav className="fixed w-full z-50 transition-all bg-white/80 border-slate-200 backdrop-blur-md border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <motion.div 
@@ -26,27 +26,17 @@ const Header = ({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen, acti
                 onClick={() => scrollToSection(item)}
                 className={`px-4 py-2 rounded-full text-sm font-bold transition-all ${
                   activeSection === item.toLowerCase() 
-                  ? (darkMode ? 'bg-indigo-600 text-white' : 'bg-slate-900 text-white')
-                  : (darkMode ? 'text-slate-400 hover:text-white' : 'text-slate-600 hover:text-slate-900')
+                  ? 'bg-slate-900 text-white'
+                  : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 {item}
               </button>
             ))}
-            <div className="w-px h-6 bg-slate-200 dark:bg-slate-800 mx-4"></div>
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className={`p-2.5 rounded-xl transition-all ${darkMode ? 'bg-slate-800 text-yellow-400 hover:bg-slate-700' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-4">
-            <button onClick={() => setDarkMode(!darkMode)} className="p-2 text-slate-500">
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
               {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -61,7 +51,7 @@ const Header = ({ darkMode, setDarkMode, mobileMenuOpen, setMobileMenuOpen, acti
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`md:hidden overflow-hidden border-t ${darkMode ? 'bg-slate-950 border-slate-800' : 'bg-white border-slate-100'}`}
+            className="md:hidden overflow-hidden border-t bg-white border-slate-100"
           >
             <div className="px-4 py-6 space-y-2">
               {navItems.map((item) => (
