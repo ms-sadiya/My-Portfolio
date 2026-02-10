@@ -5,7 +5,7 @@ const experiences = [
   {
     role: "Full Stack Developer Intern",
     company: "Quarks Systems, Ahmedabad",
-    period: "January 2025 – May 2025",
+    period: "January 2025 – March 2025",
     points: [
       "Worked on a live project at Quarks Systems and contributed to frontend features.",
       "Developed UI components using React.js and completed assigned small tasks.",
@@ -16,7 +16,7 @@ const experiences = [
   {
     role: "Jr. Full Stack Developer",
     company: "Dynastack Softwares, Ahmedabad",
-    period: "June 2025 – Present",
+    period: "March 2025 – Present",
     points: [
       "Contributing to live, production-ready SaaS and enterprise web applications.",
       "Developing reusable and responsive React components using Redux Toolkit and Ant Design.",
