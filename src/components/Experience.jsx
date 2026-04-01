@@ -16,7 +16,7 @@ const experiences = [
   {
     role: "Jr. Full Stack Developer",
     company: "Dynastack Softwares, Ahmedabad",
-    period: "March 2025 – Present",
+    period: "April 2025 – Present",
     points: [
       "Contributing to live, production-ready SaaS and enterprise web applications.",
       "Developing reusable and responsive React components using Redux Toolkit and Ant Design.",
